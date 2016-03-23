@@ -26,6 +26,12 @@ xmlns:xacro="http://ros.org/wiki/xacro"
         <rateDrift>0.0 0.0 0.0</rateDrift>
         <rateGaussianNoise>0.00 0.00 0.00</rateGaussianNoise>
         <headingDrift>0.0</headingDrift>
+	<headingDriftFrequency>0.0</headingDriftFrequency>
+	<headingOffset>0.0	</headingOffset>
+	<rateDriftFrequency>0 0 0</rateDriftFrequency>
+	<rateOffset>0 0 0</rateOffset>
+	<accelDriftFrequency>0 0 0</accelDriftFrequency>
+	<accelOffset>0 0 0</accelOffset>
         <headingGaussianNoise>0.00</headingGaussianNoise>
       </plugin>
 
@@ -37,6 +43,7 @@ xmlns:xacro="http://ros.org/wiki/xacro"
         <altimeterTopicName>altimeter</altimeterTopicName>
         <offset>0</offset>
         <drift>0.1</drift>
+	<driftFrequency>0.0</driftFrequency>
         <gaussianNoise>0.5</gaussianNoise>
       </plugin>
 
@@ -47,6 +54,7 @@ xmlns:xacro="http://ros.org/wiki/xacro"
         <topicName>magnetic</topicName>
         <offset>0 0 0</offset>
         <drift>0.0 0.0 0.0</drift>
+	<driftFrequency>0.0 0.0 0.0</driftFrequency>
         <gaussianNoise>1.3e-2 1.3e-2 1.3e-2</gaussianNoise>
       </plugin>
 
@@ -56,10 +64,14 @@ xmlns:xacro="http://ros.org/wiki/xacro"
         <bodyName>base_link</bodyName>
         <topicName>fix</topicName>
         <velocityTopicName>fix_velocity</velocityTopicName>
+	<offset>0 0 0</offset>
         <drift>5.0 5.0 5.0</drift>
+	<driftFrequency>0.0 0.0 0.0</driftFrequency>
         <gaussianNoise>0.1 0.1 0.1</gaussianNoise>
         <velocityDrift>0 0 0</velocityDrift>
+        <velocityDriftFrequency>0 0 0</velocityDriftFrequency>
         <velocityGaussianNoise>0.1 0.1 0.1</velocityGaussianNoise>
+	<velocityOffset>0 0 0</velocityOffset>
       </plugin>
 
       <plugin name="quadrotor_groundtruth_sim" filename="libgazebo_ros_p3d.so">

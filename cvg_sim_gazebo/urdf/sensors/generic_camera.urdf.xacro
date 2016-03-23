@@ -92,7 +92,6 @@ xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
           <frameName>ardrone_base_${name}cam</frameName>
         </plugin>
       </sensor>
-      <turnGravityOff>true</turnGravityOff>
       <material>Gazebo/Blue</material>
     </gazebo>
     </xacro:macro>

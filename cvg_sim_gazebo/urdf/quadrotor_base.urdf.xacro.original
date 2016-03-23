@@ -12,6 +12,11 @@ xmlns:xacro="http://ros.org/wiki/xacro"
   <!-- Main quadrotor link -->
   <xacro:macro name="quadrotor_base_macro">
     <link name="base_link">
+      <inertial>
+        <mass value="1.477" />
+        <origin xyz="0 0 0" />
+        <inertia ixx="0.01152" ixy="0.0" ixz="0.0" iyy="0.01152" iyz="0.0" izz="0.0218" />
+      </inertial>
 
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -26,23 +31,7 @@ xmlns:xacro="http://ros.org/wiki/xacro"
           <mesh filename="package://cvg_sim_gazebo/meshes/quadrotor/quadrotor_4.stl"/>
         </geometry>
       </collision>
-
     </link>
-
-    <link name="dummy_link">
-
-	      <inertial>
-        	<mass value="1.477" />
-        	<origin xyz="0 0 0" />
-        	<inertia ixx="0.01152" ixy="0.0" ixz="0.0" iyy="0.01152" iyz="0.0" izz="0.0218" />
-      	      </inertial>
-
-    </link>
-
-    <joint name="dummy_joint" type="fixed">
- 	 <parent link="base_link"/>
-         <child link="dummy_link"/>
-    </joint>
 
 
 

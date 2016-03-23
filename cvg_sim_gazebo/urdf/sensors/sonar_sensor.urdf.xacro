@@ -58,6 +58,9 @@ xmlns:xacro="http://ros.org/wiki/xacro"
 
         <plugin name="gazebo_ros_${name}_controller" filename="libhector_gazebo_ros_sonar.so">
           <gaussianNoise>0.000</gaussianNoise>
+          <offset>0.0 </offset>
+          <drift>0.0</drift>
+	  <driftFrequency>0.0</driftFrequency>
           <topicName>${ros_topic}</topicName>
           <frameId>${name}_link</frameId>
         </plugin>
